@@ -1,0 +1,37 @@
+.timeInputContainer{
+    width:142px;
+    height:179px;
+    display:flex; flex-direction: column;
+    justify-content: center;
+    border-radius: 16px;
+    hr{
+        width:80%;
+        margin: 0px auto;
+        border-width: 1px;
+        border-style:solid;
+    }
+    input{
+        width:72px;
+        border:none;
+        outline:none;
+        font-style:normal;
+    }
+}
+@media (max-width:522px) {
+    .timeInputContainer{
+        position:relative;
+        width: 293px;
+        height:max-content;
+        margin-bottom:41px;
+        box-shadow: 0px 4px 4px 0px #00000044;
+        span{
+            // display:none;
+            position:absolute;
+            width:100%;
+            top:-48px;
+        }
+        hr{
+            display:none;
+        }
+}
+}

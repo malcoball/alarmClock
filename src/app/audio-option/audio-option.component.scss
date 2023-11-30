@@ -1,0 +1,11 @@
+.audioOption{
+    display:flex;
+    justify-content: space-between; align-items: center;
+    padding: 0 24px;
+    height: 77px;
+    width:238px;
+    border-bottom:1px solid rgba(0, 0, 0, 0.2);
+    .text{
+        text-transform: capitalize;
+    }
+}

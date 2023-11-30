@@ -1,0 +1,7 @@
+<div [className]="classNames.container">
+    <span [className]="classNames.span">{{type}}</span>
+    <hr class="color3">
+    <!-- <span>Time : {{time}}</span> -->
+
+    <label><input [className]="classNames.input" (click)="activeClicked(newValue)"  (blur)="increaseValue(newValue.value)" #newValue [value]="time"></label>
+</div>

@@ -1,0 +1,13 @@
+.audioSelect{
+    position:absolute;
+    left:16px;top:16px;
+    width:82px;
+    z-index:2;
+    .dropdown{
+        display:flex;
+        flex-direction: column;
+        width:max-content;
+        position: relative;
+        z-index: 2;
+    }
+}

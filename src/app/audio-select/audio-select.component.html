@@ -1,0 +1,12 @@
+<!-- <select name="options" #mySelect (change)="changeValue(mySelect.value)">
+    <option #target *ngFor="let item of audioOptions" value="{{item}}">{{item}}</option>
+</select> -->
+<div class="audioSelect">
+    <div>
+        <span class="material-symbols-outlined" >volume_up</span>    
+        <span class="material-symbols-outlined clickable" (click)="toggleMenu()">expand_more</span>
+    </div>
+    <div class="dropdown bgColor3 text1" *ngIf="showMenu" (mouseleave)="closeMenu()">
+        <audio-option class="dropdownMenu" (changeValueEvent)="changeValue($event)" *ngFor="let item of audioOptions; index as i" [valueIn]="item" />
+    </div>
+</div>

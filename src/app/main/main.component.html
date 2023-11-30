@@ -1,0 +1,27 @@
+<main class="bgColor1 main">
+    <audio-select (changeValueEvent)="changeAudio($event)"></audio-select>
+
+    <section class="topSection">
+        <h1 class="color1 uppercase title2">{{title}}</h1>
+        <br>
+        <div class="timeDisplayContainer">
+            <time-display *ngFor="let item of time; index as i" [timeLimit]="timeLimits[i]"
+            [time]="item" [int]="i" (increaseValueEvent)="changeTime($event,i)"/>    
+        </div>
+    </section>
+
+    <section class="bottomSection">
+        <ul class="timeInputContainer">
+            <li *ngFor="let item of countdown">
+                <time-input (activeElementEvent)="valueActive($event)" 
+                (increaseValueEvent)="increaseValue(item.type,$event)" 
+                time={{item.time}} type={{item.type}}></time-input>
+            </li>
+        </ul>
+        <button class="alarmButton color2 bgColor2 title2 clickable" *ngIf="!buttonClicked; else showThis" (click)="setAlarm()">Set alarm</button>
+        <ng-template #showThis>
+            <button class="alarmButton color2 bgColor2 title2 clickable" (click)="setAlarm()">Pause alarm</button>
+        </ng-template>
+    </section>
+
+</main>
