@@ -21,7 +21,7 @@ export class MainComponent {
   timeLimits = [24,60,60];
   alarmSet : boolean = false;
   buttonClicked : boolean = false;
-  selectedAudio : audioKey = 'scream1';
+  selectedAudio : audioKey = 'helix';
   counter :any = null;
 
 
